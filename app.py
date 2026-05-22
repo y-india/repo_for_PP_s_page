@@ -1,6 +1,11 @@
 # app.py
 import streamlit as st
 
+import requests
+
+
+SHEETDB_API_URL = "https://sheetdb.io/api/v1/nplizugnr02po"
+
 # Page Config
 st.set_page_config(
     page_title="PromptPolish - Coming Soon",
@@ -225,12 +230,46 @@ div[data-testid="stVerticalBlock"] > div:has(.stTextInput) { padding-top: 0rem; 
 col4, col5, col6 = st.columns([1, 2, 1])
 
 with col5:
-    email = st.text_input("", placeholder="Enter your email address")
+
+    email = st.text_input(
+        "",
+        placeholder="Enter your email address"
+    )
+
     if st.button("Notify Me"):
+
         if email:
-            st.success(f"Thanks. We will notify you at {email}")
+
+            data = {
+                "data": [
+                    {
+                        "Email": email
+                    }
+                ]
+            }
+
+            response = requests.post(
+                SHEETDB_API_URL,
+                json=data
+            )
+
+            if response.status_code == 201:
+
+                st.success(
+                    f"Thanks. We will notify you at {email}"
+                )
+
+            else:
+
+                st.error(
+                    "Failed to save email."
+                )
+
         else:
-            st.warning("Please enter a valid email.")
+
+            st.warning(
+                "Please enter a valid email."
+            )
 
 st.markdown(
     '<div class="message">As a thank-you for supporting us before launch, you will receive 1 month of Premium access completely free once we go live.</div>',
