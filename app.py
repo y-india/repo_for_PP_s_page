@@ -14,7 +14,7 @@ st.set_page_config(
 BG_IMAGE_URL = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
 # ^ Dark blue tech/space background from Unsplash (free to use)
 
-BANNER_IMAGE_URL = "https://raw.githubusercontent.com/y-india/images_hosting/refs/heads/main/banner_proper_adjusted.png"
+BANNER_IMAGE_URL = "https://raw.githubusercontent.com/y-india/images_hosting/refs/heads/main/pp_banner.png"
 
 # -------------------------------------------------------
 
@@ -137,11 +137,11 @@ st.markdown(f"""
     font-size: 20px;
     font-weight: bold;
     width: 100%;
-    height: 60px;
+    height: 45px;
 }}
 
 .stButton>button:hover {{
-    opacity: 0.9;
+    opacity: 0.7;
 }}
 </style>
 """, unsafe_allow_html=True)
@@ -175,12 +175,12 @@ st.markdown(f"""
 
 .banner {{
     width: 100%;
-    height: 35vh;          /* ← reduced from 60vh; tweak freely (e.g. 30vh–45vh) */
+    height: 35vh;      
     background-image: url("{BANNER_IMAGE_URL}");
     background-size: cover;
     background-position: center top;  /* keeps the logo/top portion visible */
     background-repeat: no-repeat;
-    margin-top: -60px;
+    margin-top: -30px;
 }}
 </style>
 
