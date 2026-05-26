@@ -264,8 +264,11 @@ st.markdown(
 )
 
 
+st.markdown("<br>", unsafe_allow_html=True)
 
 
+if st.button("Fill form and get 1-2 month free premium"):
+    st.switch_page("pages/1_form.py")
 
 
 
@@ -274,7 +277,7 @@ st.markdown(
 
 
 st.markdown(
-    '<div class="message">As a thank-you for supporting us before launch, you will receive 1 month of Premium access completely free once we go live.</div>',
+    '<div class="message">As a thank-you for supporting us before launch, you will receive 1-2 month of Premium access completely free once we go live.</div>',
     unsafe_allow_html=True
 )
 
