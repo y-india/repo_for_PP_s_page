@@ -77,4 +77,4 @@ if submitted:
 # NAVIGATION
 # -----------------------------
 if st.button("⬅️ Back to Home"):
-    st.switch_page("app")
+    st.switch_page("app.py")
