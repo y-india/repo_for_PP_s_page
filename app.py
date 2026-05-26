@@ -211,65 +211,67 @@ your patience and support during this phase.</strong>
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
-st.markdown("""
-<div class="message">
-<strong>Enter your email address below to join our early access waitlist:</strong>
-</div>
-""", unsafe_allow_html=True)
+VIDEO_URL = "https://youtube.com/shorts/v2Z0OpBDPts?si=BSPR3orS9Oc_MhT2"  # replace with actual demo video link
+st.markdown(
+    f"""
+    <style>
+    .coming_link {{
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #11d9ff,
+            0 0 20px #11d9ff,
+            0 0 40px #11d9ff;
+        animation: glow 1s ease-in-out infinite alternate;
+    }}
 
-st.markdown("""
-<style>
-.message { margin-bottom: -20px; }
-.stTextInput { margin-top: -15px; }
-div[data-testid="stVerticalBlock"] > div:has(.stTextInput) { padding-top: 0rem; }
-</style>
-""", unsafe_allow_html=True)
+    @keyframes glow {{
+        from {{
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 10px #11d9ff,
+                0 0 20px #11d9ff;
+        }}
+        to {{
+            text-shadow:
+                0 0 10px #ffffff,
+                0 0 20px #11d9ff,
+                0 0 40px #11d9ff,
+                0 0 60px #11d9ff;
+        }}
+    }}
 
-col4, col5, col6 = st.columns([1, 2, 1])
+    .coming a {{
+        color: white;
+        text-decoration: none;
+    }}
+    </style>
 
-with col5:
+    <div class="coming_link">
+        <a href="{VIDEO_URL}" target="_blank">
+            Check Demo video of the Tool
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-    email = st.text_input(
-        "",
-        placeholder="Enter your email address"
-    )
 
-    if st.button("Notify Me"):
 
-        if email:
 
-            data = {
-                "data": [
-                    {
-                        "Email": email
-                    }
-                ]
-            }
 
-            response = requests.post(
-                SHEETDB_API_URL,
-                json=data
-            )
 
-            if response.status_code == 201:
 
-                st.success(
-                    f"Thanks. We will notify you at {email}"
-                )
 
-            else:
 
-                st.error(
-                    "Failed to save email."
-                )
 
-        else:
-
-            st.warning(
-                "Please enter a valid email."
-            )
 
 st.markdown(
     '<div class="message">As a thank-you for supporting us before launch, you will receive 1 month of Premium access completely free once we go live.</div>',
