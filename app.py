@@ -4,6 +4,8 @@ import streamlit as st
 import requests
 
 
+st.set_page_config(initial_sidebar_state="collapsed")
+
 SHEETDB_API_URL = "https://sheetdb.io/api/v1/nplizugnr02po"
 
 # Page Config
@@ -268,7 +270,7 @@ st.markdown("<br><br>",unsafe_allow_html=True)
 
 
 if st.button("Fill form and get 1-2 month free premium"):
-    st.switch_page("form_10")
+    st.switch_page("pages/form_10.py")
 
 
 

@@ -32,3 +32,9 @@ with st.form("premium_form"):
 if submitted:
     st.success("THANK YOU")
     
+
+
+
+
+if st.button("⬅️ Back to Home"):
+    st.switch_page("app.py")
