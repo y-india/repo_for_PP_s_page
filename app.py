@@ -264,11 +264,11 @@ st.markdown(
 )
 
 
-st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br><br>",unsafe_allow_html=True) 
 
 
 if st.button("Fill form and get 1-2 month free premium"):
-    st.switch_page("pages/1_form.py")
+    st.switch_page("form_10")
 
 
 
