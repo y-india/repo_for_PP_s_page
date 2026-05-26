@@ -1,7 +1,32 @@
 import streamlit as st
+import gspread
+from google.oauth2.service_account import Credentials
+from datetime import datetime
 
+# -----------------------------
+# DEMO LINK
+# -----------------------------
 DEMO_URL = "https://your-demo-video-link-here"
 
+# -----------------------------
+# GOOGLE SHEETS CONNECTION
+# -----------------------------
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"
+]
+
+creds = Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"],
+    scopes=SCOPE
+)
+
+client = gspread.authorize(creds)
+sheet = client.open("Client_Requests").sheet1
+
+# -----------------------------
+# UI
+# -----------------------------
 st.title("Premium Access Form")
 
 with st.form("premium_form"):
@@ -29,12 +54,27 @@ with st.form("premium_form"):
 
     submitted = st.form_submit_button("Submit")
 
+# -----------------------------
+# SUBMIT HANDLER
+# -----------------------------
 if submitted:
+
+    row = [
+        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        name,
+        occupation,
+        email,
+        liked,
+        ai_use,
+        watched
+    ]
+
+    sheet.append_row(row)
+
     st.success("THANK YOU")
-    
 
-
-
-
+# -----------------------------
+# NAVIGATION
+# -----------------------------
 if st.button("⬅️ Back to Home"):
-    st.switch_page("app.py")
+    st.switch_page("app")
