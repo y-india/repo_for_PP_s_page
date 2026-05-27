@@ -6,7 +6,7 @@ from datetime import datetime
 # -----------------------------
 # DEMO LINK
 # -----------------------------
-DEMO_URL = "https://your-demo-video-link-here"
+DEMO_URL = "https://drive.google.com/file/d/1NMBPLZyV9lmJO_1_sliVk5erjusc8FN3/view?usp=sharing"
 
 # -----------------------------
 # GOOGLE SHEETS CONNECTION

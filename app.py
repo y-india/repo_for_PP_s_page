@@ -215,7 +215,7 @@ your patience and support during this phase.</strong>
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-VIDEO_URL = "https://youtube.com/shorts/v2Z0OpBDPts?si=BSPR3orS9Oc_MhT2"  # replace with actual demo video link
+VIDEO_URL = "https://drive.google.com/file/d/1NMBPLZyV9lmJO_1_sliVk5erjusc8FN3/view?usp=sharing"  # replace with actual demo video link
 st.markdown(
     f"""
     <style>
