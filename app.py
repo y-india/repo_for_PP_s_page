@@ -215,58 +215,50 @@ your patience and support during this phase.</strong>
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-VIDEO_URL = "https://drive.google.com/file/d/1NMBPLZyV9lmJO_1_sliVk5erjusc8FN3/view?usp=sharing"  # replace with actual demo video link
-st.markdown(
-    f"""
-    <style>
-    .coming_link {{
-        font-size: 60px;
-        font-weight: bold;
-        color: white;
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
+st.markdown("""
+<style>
+.coming_link button {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #11d9ff,
+        0 0 20px #11d9ff,
+        0 0 40px #11d9ff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
         text-shadow:
             0 0 5px #ffffff,
             0 0 10px #11d9ff,
+            0 0 20px #11d9ff;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ffffff,
             0 0 20px #11d9ff,
-            0 0 40px #11d9ff;
-        animation: glow 1s ease-in-out infinite alternate;
-    }}
+            0 0 40px #11d9ff,
+            0 0 60px #11d9ff;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
 
-    @keyframes glow {{
-        from {{
-            text-shadow:
-                0 0 5px #ffffff,
-                0 0 10px #11d9ff,
-                0 0 20px #11d9ff;
-        }}
-        to {{
-            text-shadow:
-                0 0 10px #ffffff,
-                0 0 20px #11d9ff,
-                0 0 40px #11d9ff,
-                0 0 60px #11d9ff;
-        }}
-    }}
+# Button navigation
+if st.button("Try PromptPolish Demo Version"):
+    st.switch_page("pages/demo.py")   # replace with your page path
 
-    .coming a {{
-        color: white;
-        text-decoration: none;
-    }}
-    </style>
+st.markdown("<br><br>", unsafe_allow_html=True)
 
-    <div class="coming_link">
-        <a href="{VIDEO_URL}" target="_blank">
-            Check Demo video of the Tool
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-
-st.markdown("<br><br>",unsafe_allow_html=True) 
 
 
 if st.button("Fill form and get 1-2 month free premium"):
