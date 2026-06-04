@@ -205,6 +205,12 @@ with col2:
     """, unsafe_allow_html=True)
     st.markdown('<div class="coming">COMING SOON</div>', unsafe_allow_html=True)
 
+    if st.button("Check Tool Details", use_container_width=True, key="demo_button"):
+        st.switch_page("pages/details.py")   # replace with your page path
+
+
+
+
 st.markdown("""
 <div class="message">
 <strong>We are currently working continuously to improve and launch the platform as soon as possible. 
