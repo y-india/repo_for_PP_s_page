@@ -86,3 +86,8 @@ st.markdown("---")
 st.info(
     "If the shortcut does not work immediately, refresh the chatbot tab once after loading the extension."
 )
+
+
+
+if st.button("⬅️ Back to Home"):
+    st.switch_page("app.py")
