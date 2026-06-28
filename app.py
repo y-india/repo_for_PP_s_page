@@ -15,11 +15,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# -------------------------------------------------------
-# 🔗 ONLINE IMAGE LINKS — replace these with your own URLs
-# -------------------------------------------------------
 BG_IMAGE_URL = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
-# ^ Dark blue tech/space background from Unsplash (free to use)
 
 BANNER_IMAGE_URL = "https://raw.githubusercontent.com/y-india/images_hosting/refs/heads/main/pp_banner.png"
 
@@ -203,19 +199,20 @@ with col2:
     PromptPolish
     </h1>
     """, unsafe_allow_html=True)
-    st.markdown('<div class="coming">COMING SOON</div>', unsafe_allow_html=True)
+    st.markdown('<div class="coming">IDEA WHICH FAILED VALIDATION</div>', unsafe_allow_html=True)
 
     if st.button("Check Tool Details", use_container_width=True, key="demo_button"):
-        st.switch_page("pages/details.py")   # replace with your page path
-
+        st.switch_page("pages/details.py") 
 
 
 
 st.markdown("""
 <div class="message">
-<strong>We are currently working continuously to improve and launch the platform as soon as possible. 
-Our team is focused on creating the best possible experience for you, and we truly appreciate 
-your patience and support during this phase.</strong>
+<strong>Building this platform taught me valuable lessons. 
+            As development progressed, it became clear that the original 
+            concept was not the right direction for the long term. Rather than 
+            launching something i was not confident in, i made the difficult 
+            decision to pause and move on from the idea.</strong>
 </div>
 """, unsafe_allow_html=True)
 
@@ -277,7 +274,7 @@ if st.button("Fill form and get 1-2 month free premium"):
 
 
 st.markdown(
-    '<div class="message">As a thank-you for supporting us before launch, you will receive 1-2 month of Premium access completely free once we go live.</div>',
+    '<div class="message">I sincerely thank everyone who supported me from the beginning. Your trust and encouragement have been invaluable, and I will look forward to applying everything I learned to future projects.</div>',
     unsafe_allow_html=True
 )
 
