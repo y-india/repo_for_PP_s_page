@@ -257,14 +257,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Button navigation
-if st.button("Try PromptPolish Demo Version"):
-    st.switch_page("pages/demo.py")   # replace with your page path
+if st.button("But you can still try the tool for free"):
+    st.switch_page("pages/demo.py")  
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 
 
-if st.button("Fill form and get 1-2 month free premium"):
+if st.button("Provide Feedback"):
     st.switch_page("pages/form_10.py")
 
 

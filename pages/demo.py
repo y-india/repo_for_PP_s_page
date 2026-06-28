@@ -14,7 +14,7 @@ st.markdown("---")
 st.warning("""
 ### Important Note
 
-This demo represents approximately **25% of the full tool**.
+This demo only represented approximately **25% of the full tool**.
 
 ### Key features in the original tool:
 • Ability to add custom instructions to modify prompts  
@@ -24,7 +24,7 @@ This demo represents approximately **25% of the full tool**.
 
 ### If you like this demo:
 • Watch the original tool video below  
-• Fill out the form for a free offer when the complete version launches  
+• Provide feedback  
 """)
 
 # Original Tool Video Link
@@ -38,10 +38,10 @@ st.link_button(
 
 # Switch page button for form page
 if st.button(
-    "🎁 Claim Free Launch Offer",
+    "Provide Feedback",
     use_container_width=True
 ):
-    st.switch_page("pages/form_10.py")   # change filename if needed
+    st.switch_page("pages/form_10.py")  
 
 st.markdown("---")
 
