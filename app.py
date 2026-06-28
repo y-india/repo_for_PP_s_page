@@ -10,7 +10,7 @@ SHEETDB_API_URL = "https://sheetdb.io/api/v1/nplizugnr02po"
 
 # Page Config
 st.set_page_config(
-    page_title="PromptPolish - Coming Soon",
+    page_title="PromptPolish - Project",
     page_icon="✨",
     layout="wide"
 )
